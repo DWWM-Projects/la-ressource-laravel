@@ -12,7 +12,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-<body class="bg-green-200">
+<body class="bg-green-200 font-[kalam]">
     <header class="flex flex-row justify-between bg-green-400 text-emerald-600 font-[Kalam] p-6">
         <div class="flex flex-row items-center font-[] gap-6 ml-6">
             <h1 class="text-6xl font-bold font-[Shrikhand]">{{ config('app.name') }}</h1>
