@@ -12,17 +12,21 @@
 
 </head>
 <body class="bg-green-200">
-    <header class="bg-green-300">
-        <div class="w-full">
-            <h1>{{ config('app.name') }}</h1>
-            <a href="{{ route('home') }}">Accueil</a>
-            <a href="{{ route('blog') }}">Blog</a>
+    <header class="flex flex-row justify-between bg-green-400 text-emerald-800 p-6">
+        <div class="flex flex-row items-center gap-6 ml-6">
+            <h1 class="text-6xl">{{ config('app.name') }}</h1>
+            <a class="text-3xl hover:text-white" href="{{ route('home') }}">Accueil</a>
+            <a class="text-3xl hover:text-white" href="{{ route('blog') }}">Blog</a>
+        </div>
+        <div class="flex flex-row items-center gap-6 mr-6">
+            <a class="text-3xl hover:text-white" href="#">S'enregistrer</a>
+            <a class="text-3xl hover:text-white" href="#">S'inscrire</a>
         </div>
     </header>
 
     @yield('content')
 
-    <footer>
+    <footer class="bg-green-300 text-2xl text-center p-6">
         Copyright &copy {{ now()->year }} - {{ config('app.name') }}
     </footer>
 </body>
