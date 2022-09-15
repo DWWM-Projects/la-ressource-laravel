@@ -7,26 +7,27 @@
     <title>
         @section('title') {{ config('app.name') }} @show
     </title>
+    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Kalam:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 <body class="bg-green-200">
-    <header class="flex flex-row justify-between bg-green-400 text-emerald-800 p-6">
-        <div class="flex flex-row items-center gap-6 ml-6">
-            <h1 class="text-6xl">{{ config('app.name') }}</h1>
-            <a class="text-3xl hover:text-white" href="{{ route('home') }}">Accueil</a>
-            <a class="text-3xl hover:text-white" href="{{ route('blog') }}">Blog</a>
+    <header class="flex flex-row justify-between bg-green-400 text-emerald-600 font-[Kalam] p-6">
+        <div class="flex flex-row items-center font-[] gap-6 ml-6">
+            <h1 class="text-6xl font-bold font-[Shrikhand]">{{ config('app.name') }}</h1>
+            <a class="text-5xl hover:text-white" href="{{ route('home') }}">Accueil</a>
+            <a class="text-5xl hover:text-white" href="{{ route('blog') }}">Blog</a>
         </div>
-        <div class="flex flex-row items-center gap-6 mr-6">
-            <a class="text-3xl hover:text-white" href="#">S'enregistrer</a>
-            <a class="text-3xl hover:text-white" href="#">S'inscrire</a>
+        <div class="flex flex-row items-center font-[Kalam] gap-6 mr-6">
+            <a class="text-5xl hover:text-white" href="#">S'enregistrer</a>
+            <a class="text-5xl hover:text-white" href="#">S'inscrire</a>
         </div>
     </header>
 
     @yield('content')
 
-    <footer class="bg-green-300 text-2xl text-center p-6">
+    <footer class="bg-green-300 text-3xl text-center text-emerald-600 font-[Kalam] p-6">
         Copyright &copy {{ now()->year }} - {{ config('app.name') }}
     </footer>
 </body>
