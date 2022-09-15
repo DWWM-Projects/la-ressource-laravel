@@ -14,7 +14,12 @@
             <div class="w-2/3 mx-auto flex flex-row flex-wrap gap-6 text-emerald-600 border-4 border-green-400 rounded-lg p-6 mb-6">
                 <div class="w-full flex flex-row justify-between items-center bg-green-400 rounded-lg p-2 mb-3">
                     <p class="text-2xl">{{ $post->author }}</p>
-                    <p class="text-xl">{{ $post->created_at }}</p>
+                    <div class="flex flex-row gap-3">
+                        <p class="text-xl">Le: {{ $post->created_at }}</p>
+                        {{-- @if () --}}
+                            <p class="text-xl">Modifié le: {{ $post->updated_at }}</p>
+                        {{-- @endif --}}
+                    </div>
                 </div>
                 <div class="flex flex-row items-center gap-6">
                     <p class="w-3/5 mx-auto text-xl">{{ $post->content }}</p>
@@ -28,6 +33,10 @@
             </div>
         @endforeach
 
+    </div>
+
+    <div class="w-2/3 mx-auto mb-6">
+        {{ $posts->links() }}
     </div>
 
 @endsection
