@@ -1,11 +1,9 @@
 @extends('layouts.base')
 
 @section('title')
-    Accueil - @parent
+    Blog - @parent
 @endsection
 
 @section('content')
-
-    <h1>It works</h1>
-
+    Blog
 @endsection

@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        @section('title') ZeldaBlog @show
+        @section('title') {{ config('app.name') }} @show
     </title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-<body>
-    <header>
+<body class="bg-green-200">
+    <header class="bg-green-300">
         <div class="w-full">
             <h1>{{ config('app.name') }}</h1>
+            <a href="{{ route('home') }}">Accueil</a>
+            <a href="{{ route('blog') }}">Blog</a>
         </div>
     </header>
 
