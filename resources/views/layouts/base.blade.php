@@ -18,6 +18,7 @@
             <h1 class="text-6xl font-bold font-[Shrikhand]">{{ config('app.name') }}</h1>
             <a class="text-5xl hover:text-white" href="{{ route('home') }}">Accueil</a>
             <a class="text-5xl hover:text-white" href="{{ route('blog') }}">Blog</a>
+            <a class="text-5xl hover:text-white" href="{{ route('new-post') }}">Nouvel article</a>
         </div>
         <div class="flex flex-row items-center font-[Kalam] gap-6 mr-6">
             <a class="text-5xl hover:text-white" href="#">S'enregistrer</a>

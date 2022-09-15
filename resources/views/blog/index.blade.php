@@ -16,9 +16,10 @@
                     <p class="text-2xl">{{ $post->author }}</p>
                     <p class="text-xl">{{ $post->created_at }}</p>
                 </div>
-                <div class="flex flex-row gap-6">
+                <div class="flex flex-row items-center gap-6">
                     <p class="w-3/5 mx-auto text-xl">{{ $post->content }}</p>
-                    <img class="w-1/5 rounded-lg" src="img/linkfouet.jpg">
+                    {{-- <img class="w-1/5 rounded-lg" src="img/linkfouet.jpg"> --}}
+                    <img class="w-1/5 rounded-lg" src="{{ $post->image }}}}">
                 </div>
                 <div class="w-full flex flex-row gap-3">
                     <a class="w-1/2 bg-green-400 hover:bg-green-600 duration-500 text-3xl text-center hover:text-white rounded-lg p-3" href="#">Modifier</a>

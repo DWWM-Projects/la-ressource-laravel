@@ -13,4 +13,14 @@ class BlogController extends Controller
             'posts' => Post::all(),
         ]);
     }
+
+    public function create()
+    {
+        return view('blog.create');
+    }
+
+    public function store()
+    {
+        //
+    }
 }
