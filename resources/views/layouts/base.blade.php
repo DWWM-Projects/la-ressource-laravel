@@ -12,6 +12,16 @@
 
 </head>
 <body>
-    
+    <header>
+        <div class="w-full">
+            <h1>{{ config('app.name') }}</h1>
+        </div>
+    </header>
+
+    @yield('content')
+
+    <footer>
+        Copyright &copy {{ now()->year }} - {{ config('app.name') }}
+    </footer>
 </body>
 </html>
