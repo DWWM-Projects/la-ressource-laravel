@@ -20,3 +20,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/nouvel-article', [BlogController::class, 'create'])->name('new-post');
 Route::post('/blog/nouvel-article', [BlogController::class, 'store']);
+Route::get('/blog/{post}/modifier', [BlogController::class, 'edit'])->name('post.edit');
+Route::put('/blog/{post}/modifier', [BlogController::class, 'update']);
+Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('post.delete');
