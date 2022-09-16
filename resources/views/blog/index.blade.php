@@ -19,7 +19,7 @@
         @foreach ($posts as $post)        
             <div class="w-2/3 mx-auto flex flex-row flex-wrap gap-6 text-emerald-600 border-4 border-green-400 rounded-lg p-6 mb-6">
                 <div class="w-full flex flex-row justify-between items-center bg-green-400 rounded-lg p-2 mb-3">
-                    <p class="text-2xl">{{ $post->author }}</p>
+                    <p class="w-full text-2xl">{{ $post->author }}</p>
                     <div class="flex flex-row gap-3">
                         <p class="text-xl">Le: {{ $post->created_at }}</p>
                         {{-- @if () --}}
@@ -27,9 +27,8 @@
                         {{-- @endif --}}
                     </div>
                 </div>
-                <div class="flex flex-row items-center gap-6">
+                <div class="w-full flex flex-row items-center gap-6">
                     <p class="w-3/5 mx-auto text-xl">{{ $post->content }}</p>
-                    {{-- <img class="w-1/5 rounded-lg" src="img/linkfouet.jpg"> --}}
                     <img class="w-1/5 rounded-lg" src="{{ $post->image }}">
                 </div>
                 <div class="w-full flex flex-row gap-3">
