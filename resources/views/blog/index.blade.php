@@ -8,6 +8,12 @@
     
     <h1 class="text-6xl text-center text-emerald-600 font-[Kalam] my-6">Les Articles</h1>
 
+    @if (session('status'))
+        <div class="w-2/3 mx-auto bg-green-400 text-emerald-600 text-center text-2xl rounded-lg p-2">
+            {{ session('status') }}
+        </div>
+    @endif
+
     <div class="flex flex-col gap-6">
 
         @foreach ($posts as $post)        

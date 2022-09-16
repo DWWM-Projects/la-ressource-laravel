@@ -10,7 +10,14 @@
 
     <div class="w-1/4 mx-auto flex flex-col text-emerald-600">
 
+        <ul class="mb-6">
+            @foreach($errors->all() as $error)
+                <li class="text-xl">{{ $error }}</li>
+            @endforeach
+        </ul>
+
         <form action="" method="post" enctype="multipart/form-data">
+            @csrf
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
                 <label for="author">Votre pseudo</label>
