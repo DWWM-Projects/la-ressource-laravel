@@ -6,33 +6,42 @@
 
 @section('content')
     
-    <h1 class="text-6xl text-center text-emerald-600 font-[Kalam] my-6">Nouvel article</h1>
+    <h1 class="text-6xl text-center text-emerald-600 font-[Kalam] my-6">Modifier l'article</h1>
 
     <div class="w-1/4 mx-auto flex flex-col text-emerald-600">
 
-        <ul class="mb-6">
+        {{-- <ul class="mb-6">
             @foreach($errors->all() as $error)
                 <li class="text-xl">{{ $error }}</li>
             @endforeach
-        </ul>
+        </ul> --}}
 
         <form action="" method="post" enctype="multipart/form-data">
             @csrf
             @method('put')
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
-                <label for="author">Votre pseudo</label>
-                <input type="text" name="author" id="author">
+                <label class="mb-1" for="author">Votre pseudo</label>
+                <input class="mb-1" type="text" name="author" id="author" value="{{ old('author', $post->author) }}">
+                @error('author')
+                    <p>{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
-                <label for="content">Votre article</label>
-                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                <label class="mb-1" for="content">Votre article</label>
+                <textarea class="mb-1" name="content" id="content" cols="30" rows="10">{{ old('content', $post->content) }}</textarea>
+                @error('content')
+                    <p>{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
-                <label for="image">Image</label>
-                <input type="file" name="image" id="image">
+                <label class="mb-1" for="image">Image</label>
+                <input class="mb-1" type="file" name="image" id="image" value="{{ old('image', $post->image) }}">
+                @error('image')
+                    <p>{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="text-center">

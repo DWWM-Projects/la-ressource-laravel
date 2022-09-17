@@ -19,11 +19,11 @@
         @foreach ($posts as $post)        
             <div class="w-2/3 mx-auto flex flex-row flex-wrap gap-6 text-emerald-600 border-4 border-green-400 rounded-lg p-6 mb-6">
                 <div class="w-full flex flex-row justify-between items-center bg-green-400 rounded-lg p-2 mb-3">
-                    <p class="w-full text-2xl">{{ $post->author }}</p>
+                    <p class="text-2xl">{{ $post->author }}</p>
                     <div class="flex flex-row gap-3">
-                        <p class="text-xl">Le: {{ $post->created_at }}</p>
+                        <p class="text-xl">Le: {{ $post->created_at->translatedFormat('d F Y') }}</p>
                         {{-- @if () --}}
-                            <p class="text-xl">Modifié le: {{ $post->updated_at }}</p>
+                            <p class="text-xl">Modifié le: {{ $post->updated_at->translatedFormat('d F Y') }}</p>
                         {{-- @endif --}}
                     </div>
                 </div>

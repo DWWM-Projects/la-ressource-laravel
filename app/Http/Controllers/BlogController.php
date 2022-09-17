@@ -53,7 +53,9 @@ class BlogController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
+
             // Changer dans le .env File system de local en public
+
             if ($post->image) {
                 Storage::delete(str($post->image)->remove('/storage/'));
             }
