@@ -23,7 +23,7 @@
                     <div class="flex flex-row gap-3">
                         <p class="text-xl">Le: {{ $post->created_at->translatedFormat('d F Y') }}</p>
                         {{-- @if () --}}
-                            <p class="text-xl">Modifié le: {{ $post->updated_at->translatedFormat('d F Y') }}</p>
+                            <p class="text-xl">Modifié: {{ $post->updated_at->diffForHumans() }}</p>
                         {{-- @endif --}}
                     </div>
                 </div>

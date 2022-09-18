@@ -11,6 +11,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+
 </head>
 <body class="bg-green-200 font-[Kalam]">
     <header class="flex flex-row justify-between bg-green-400 text-emerald-600 font-[Kalam] p-6">
