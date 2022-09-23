@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,6 @@ Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('post.de
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::get('/logout', [LoginController::class, 'destroy'])->name('logout');
+
+Route::get('/inscription', [RegisterController:: class, 'index'])->name('register');
+Route::post('/inscription', [RegisterController:: class, 'store']);

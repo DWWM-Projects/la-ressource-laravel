@@ -23,11 +23,11 @@
         </div>
         <div class="flex flex-row items-center font-[Kalam] gap-6 mr-6">
             @auth
-                <p class="text-5xl"">{{ Auth::user()->email }}</p>
+                <p class="text-5xl text-white"">{{ Auth::user()->name }}</p>
                 <a class="text-5xl hover:text-white" href="{{ route('logout') }}">Déconnexion</a>
             @else
                 <a class="text-5xl hover:text-white" href="{{ route('login') }}">Connexion</a>
-                <a class="text-5xl hover:text-white" href="#">S'inscrire</a>
+                <a class="text-5xl hover:text-white" href="{{ route('register') }}">S'inscrire</a>
             @endauth
         </div>
     </header>

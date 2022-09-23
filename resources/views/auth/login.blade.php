@@ -6,7 +6,7 @@
 
 @section('content')
     
-    <h1 class="text-6xl text-center text-emerald-600 font-[Kalam] my-6">Nouvel article</h1>
+    <h1 class="text-6xl text-center text-emerald-600 font-[Kalam] my-6">Connexion</h1>
 
     <div class="w-1/4 mx-auto flex flex-col text-emerald-600">
 
@@ -14,7 +14,7 @@
             @csrf
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
-                <label class="mb-1" for="email">Votre pseudo</label>
+                <label class="mb-1" for="email">Email</label>
                 <input class="mb-1" type="email" name="email" id="email" value="{{ old('email') }}">
                 @error('email')
                     <p>{{ $message }}</p>
@@ -22,12 +22,12 @@
             </div>
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
-                <label class="mb-1" for="password">Votre article</label>
+                <label class="mb-1" for="password">Mot de passe</label>
                 <input class="mb-1" type="password" name="password" id="password">
                 @error('password')
                     <p>{{ $message }}</p>
                 @enderror
-            </div>
+            </div>            
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
                 <label class="mb-1" for="remember">
