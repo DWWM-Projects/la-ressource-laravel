@@ -16,17 +16,17 @@
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
                 <label class="mb-1" for="email">Votre pseudo</label>
                 <input class="mb-1" type="email" name="email" id="email" value="{{ old('email') }}">
-                {{-- @error('email')
+                @error('email')
                     <p>{{ $message }}</p>
-                @enderror --}}
+                @enderror
             </div>
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
                 <label class="mb-1" for="password">Votre article</label>
                 <input class="mb-1" type="password" name="password" id="password">
-                {{-- @error('password')
+                @error('password')
                     <p>{{ $message }}</p>
-                @enderror --}}
+                @enderror
             </div>
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
@@ -34,9 +34,9 @@
                     <input type="checkbox" name="remember" id="remember">
                     Se rappeler de moi
                 </label>                
-                {{-- @error('remember')
+                @error('remember')
                     <p>{{ $message }}</p>
-                @enderror --}}
+                @enderror
             </div>
 
             <div class="text-center">

@@ -26,3 +26,5 @@ Route::put('/blog/{post}/modifier', [BlogController::class, 'update']);
 Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('post.delete');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'store']);
+Route::get('/logout', [LoginController::class, 'destroy'])->name('logout');
