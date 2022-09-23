@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,7 @@ Route::get('/logout', [LoginController::class, 'destroy'])->name('logout');
 
 Route::get('/inscription', [RegisterController:: class, 'index'])->name('register');
 Route::post('/inscription', [RegisterController:: class, 'store']);
+
+Route::get('/email/verify', [VerifyEmailController::class, 'index'])->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', [VerifyEmailController::class, 'update'])->name('verification.verify');
+Route::get('email/verification-notification', [VerifyEmailController::class, 'store'])->name('verification.send');
