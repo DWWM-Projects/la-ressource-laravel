@@ -5,12 +5,16 @@
 @endsection
 
 @section('content')
+
+    @if (session('status'))
+        <p>{{ session('status') }}</p>
+    @endif
     
     <h1 class="text-6xl text-center text-emerald-600 font-[Kalam] my-6">Connexion</h1>
 
     <div class="w-1/4 mx-auto flex flex-col text-emerald-600">
 
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="post">
             @csrf
 
             <div class="flex flex-col border-4 border-green-400 rounded-lg text-2xl p-4 mb-3">
@@ -44,6 +48,10 @@
             </div>
 
         </form>
+
+        <div>
+            <a class="text-xl hover:text-white" href="{{ route('password.request') }}">Mot de passe oublié ?</a>
+        </div>
 
     </div>
 
