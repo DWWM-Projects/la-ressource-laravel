@@ -22,7 +22,7 @@
             <a class="text-5xl hover:text-white" href="{{ route('new-post') }}">Nouvel article</a>
         </div>
         <div class="flex flex-row items-center font-[Kalam] gap-6 mr-6">
-            <a class="text-5xl hover:text-white" href="#">S'enregistrer</a>
+            <a class="text-5xl hover:text-white" href="{{ route('login') }}">Connexion</a>
             <a class="text-5xl hover:text-white" href="#">S'inscrire</a>
         </div>
     </header>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,5 @@ Route::post('/blog/nouvel-article', [BlogController::class, 'store']);
 Route::get('/blog/{post}/modifier', [BlogController::class, 'edit'])->name('post.edit');
 Route::put('/blog/{post}/modifier', [BlogController::class, 'update']);
 Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('post.delete');
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
