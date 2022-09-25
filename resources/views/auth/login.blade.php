@@ -49,8 +49,8 @@
 
         </form>
 
-        <div>
-            <a class="text-xl hover:text-white" href="{{ route('password.request') }}">Mot de passe oublié ?</a>
+        <div class="text-center">
+            <a class="text-xl text-center hover:text-white" href="{{ route('password.request') }}">Mot de passe oublié ?</a>
         </div>
 
     </div>

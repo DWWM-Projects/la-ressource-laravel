@@ -12,7 +12,7 @@ class BlogController extends Controller
     {
 
         return view('blog.index', [
-            'posts' => Post::orderBy('created_at', 'ASC')->paginate(4),
+            'posts' => Post::orderBy('created_at', 'DESC')->paginate(4),
         ]);
     }
 
